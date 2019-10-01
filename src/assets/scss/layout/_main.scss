@@ -1,0 +1,64 @@
+
+html {
+	background-color: #3a3a3a;
+	background-color: #434343;
+	background-image:linear-gradient(#434343, #282828);
+}
+body {
+background-color: #269;
+background-size: 100px 100px,
+100px 100px,
+20px 20px,
+20px 20px;
+background-position: -2px -2px,
+-2px -2px,
+-1px -1px,
+-1px -1px;
+background-image: -webkit-linear-gradient(white 2px, transparent 2px),
+-webkit-linear-gradient(0, white 2px, transparent 2px),
+-webkit-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+-webkit-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px);
+background-image: -moz-linear-gradient(white 2px, transparent 2px),
+-moz-linear-gradient(0, white 2px, transparent 2px),
+-moz-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+-moz-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px);
+background-image: linear-gradient(white 2px, transparent 2px),
+linear-gradient(90deg, white 2px, transparent 2px),
+linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
+-pie-background: linear-gradient(white 2px, transparent 2px) -2px -2px / 100px,
+linear-gradient(90deg, white 2px, transparent 2px) -2px -2px / 100px,
+linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px) -1px -1px / 20px,
+linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px) -1px -1px / 20px,
+#269;
+behavior: url(/pie/PIE.htc);
+	background-color:white;
+	color: black;
+	border-left: 2px solid #3a3a3a;
+	border-right: 2px solid #3a3a3a;
+	&:before,
+	&:after {
+		content: "";
+		position: fixed;
+		background: #3a3a3a;
+		left: 0;
+		right: 0;
+		height: 5px;
+	}
+	&:before {
+		top: 0;
+	}
+	&:after {
+		bottom: 0;
+	}
+}
+section {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	background: repeating-linear-gradient(180deg, transparent, transparent calc(8.33333vw - 1px), rgba(255, 255, 255, 1) calc(8.33333vw - 1px), rgba(255, 255, 255, 1) 8.33333vw);
+	}
+
+
+
+

@@ -1,0 +1,14 @@
+#menu {
+	top: 11.11111vw;
+	right: 8.33333vw;
+	position: fixed;
+	color: black;
+	z-index: 999;
+	font-size: $base-size / 10;
+	font-family: $font-base;
+	ul {
+		border: 1px solid black;
+		padding: 10px;
+	}
+
+}
