@@ -1,0 +1,72 @@
+.skill {
+    display: grid;
+    grid-template-columns: repeat(9, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 10px;
+    margin: auto;
+    max-width: 1200px;
+    justify-content: center;
+    .box__inner {
+        background: transparent;
+        padding: 10px 15px;
+        width: calc(100% - 30px);
+        height: calc(100% - 20px);
+        transition: inherit;
+        border: 1px solid $black;
+        .level {
+            font-size: 11px;
+            text-align: right;
+            display: block;
+        }
+        .title {
+            font: 700 34px/1.3 $font-title;
+            margin: 0.3em 0 0;
+            transition: 0.8s ease 600ms;
+        }
+        .titleFull {
+            font: 500 12px $font-base;
+            margin-top: -0.2em;
+        }
+      
+    }
+
+}
+.skill-container {
+    width: calc(100% - 10rem);
+
+    .skills {
+    margin: 0 0 30px 0;
+    padding: 0;
+
+    li {
+        display: block;
+        position: relative;
+        background-color: #999;
+        margin: 10px 0;
+        transition: width 300ms ease-in-out;
+
+        .collapsed & {
+            width: 0 !important;
+        }
+
+        p {
+            padding: 10px;
+            margin: 0;
+            font-weight: bold;
+            color: #fff !important;
+        }
+
+        span {
+            position: absolute;
+            right: 10px;
+            display: inline-block;
+            width: 30px;
+            top: 11px;
+            text-align: right;
+            font-weight: normal;
+            color: #fff;
+            font-size: 11px;
+        }
+    }
+}
+}

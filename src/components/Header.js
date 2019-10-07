@@ -2,14 +2,31 @@
 import PropTypes from "prop-types"
 import React from "react"
 import Menu from "./Menu"
-const Header = ({ siteTitle }) => (
-  <header id="header" className="">
-      <Menu />
-      <h1>are you me?</h1>
-    <h2>> I am.<br />>.web.developer<br />>.web.designer</h2>
-  </header>
-    
-)
+
+
+const Header = (props) => (
+      <header id="header" className="">
+          <Menu />
+          <div class="tagLine">
+            <div className="inner">
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+              <span>popcorn - </span>
+            </div>
+          </div>
+      </header>
+      
+    );
+ 
+
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

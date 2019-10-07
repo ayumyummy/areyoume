@@ -2,11 +2,75 @@
 
 /* Header */
 	
-header {
+#landing {
 	position: relative;
+	
 	h1 {
 		font-family: $font-title;
-		color: black;
+		color: #0e1111;
+		margin: 0;
+		white-space: nowrap;
+	}
+	.title {
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+/*tag line*/
+.tagLine {
+	height: 5vw;
+	position: relative;
+	width: 100vw;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	.inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 9;
+		white-space: nowrap;
+		animation-name: endless_tag;
+		animation-iteration-count: infinite;
+		animation-duration: 2s;
+		animation-timing-function: linear;
+		// will-change: transform;
+		transition: ease-out .2s;
+		span {
+			font-family: $font-base;
+			font-size: 2.5vw;
+			line-height: 5vw;
+			font-weight: 600;
+			color: #E5E5E5;
+			letter-spacing: 2px;
+		}
 	}
 }
 
+
+
+@-webkit-keyframes endless_tag {
+	0% {
+		-webkit-transform: translate3d(0%, 0, 0);
+		transform: translate3d(0%, 0, 0);
+	}
+
+	100% {
+		-webkit-transform: translate3d(-20.1%, 0, 0);
+		transform: translate3d(-20.1%, 0, 0);
+	}
+}
+
+@keyframes endless_tag {
+	0% {
+		-webkit-transform: translate3d(0%, 0, 0);
+		transform: translate3d(0%, 0, 0);
+	}
+
+	100% {
+		-webkit-transform: translate3d(-20.1%, 0, 0);
+		transform: translate3d(-20.1%, 0, 0);
+	}
+}

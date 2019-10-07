@@ -3,8 +3,10 @@
 /* Footer */
 
 	footer {
+		position: relative;
+		bottom: 0; 
 		li {
-			color: black;
+			color: #0e1111;
 			display: inline-block;
 			line-height: 1;
 			margin-left: 1em;

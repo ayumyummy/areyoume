@@ -25,7 +25,7 @@ $paragraph-margin : 20px;
 
 
 // Links
-$link-color: black;
+$link-color: #0e1111;
 
 // hr
 $hr-margin: 30px;
@@ -34,6 +34,7 @@ $hr-margin: 30px;
 $font-weight-bold: 800;
 $border-color: #DADADA;
 
+$black: #0e1111;
 
 /*------------------------------------*\
     # Type
@@ -69,7 +70,7 @@ html {
 
 // Headers
 $header-margin : 10px;
-$header-color: black;
+$header-color: #0e1111;
 h1,
 h2,
 h3,
@@ -140,12 +141,12 @@ p {
 // Links
 a {
     position: relative;
-    color: black;
+    color: #0e1111;
     letter-spacing: 1px;
     text-decoration: none;
     
     &:hover {
-        color: black;
+        color: #0e1111;
 
         &::before {
             content: attr(data-text);
@@ -358,3 +359,15 @@ ul {
 }
 
 
+
+
+
+
+.text-large {
+    font-size: 20vw;
+    font-family: $font-title;
+    &-email {
+        font-size: 5vw;
+        font-family: $font-title;
+    }
+}

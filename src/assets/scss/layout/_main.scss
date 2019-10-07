@@ -1,64 +1,57 @@
 
-html {
-	background-color: #3a3a3a;
-	background-color: #434343;
-	background-image:linear-gradient(#434343, #282828);
-}
+
 body {
-background-color: #269;
-background-size: 100px 100px,
-100px 100px,
-20px 20px,
-20px 20px;
-background-position: -2px -2px,
--2px -2px,
--1px -1px,
--1px -1px;
-background-image: -webkit-linear-gradient(white 2px, transparent 2px),
--webkit-linear-gradient(0, white 2px, transparent 2px),
--webkit-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
--webkit-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px);
-background-image: -moz-linear-gradient(white 2px, transparent 2px),
--moz-linear-gradient(0, white 2px, transparent 2px),
--moz-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
--moz-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px);
-background-image: linear-gradient(white 2px, transparent 2px),
-linear-gradient(90deg, white 2px, transparent 2px),
-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
--pie-background: linear-gradient(white 2px, transparent 2px) -2px -2px / 100px,
-linear-gradient(90deg, white 2px, transparent 2px) -2px -2px / 100px,
-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px) -1px -1px / 20px,
-linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px) -1px -1px / 20px,
-#269;
-behavior: url(/pie/PIE.htc);
-	background-color:white;
-	color: black;
-	border-left: 2px solid #3a3a3a;
-	border-right: 2px solid #3a3a3a;
-	&:before,
-	&:after {
-		content: "";
-		position: fixed;
-		background: #3a3a3a;
-		left: 0;
-		right: 0;
-		height: 5px;
-	}
-	&:before {
-		top: 0;
-	}
-	&:after {
-		bottom: 0;
+	cursor: none;
+	// cursor: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E %3Cpath d='M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4 L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1 c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1 c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z'/%3E %3C/svg%3E"),
+	// pointer;
+	background: repeating-linear-gradient(180deg, hsl(345, 0%, 95%) 0px, hsl(345, 0%, 95%) 3px, transparent 3px, transparent 180px),
+	repeating-linear-gradient(270deg, hsl(345, 0%, 95%) 0px, hsl(345, 0%, 95%) 3px, transparent 3px, transparent 180px),
+	linear-gradient(232deg, hsl(345, 0%, 97%), hsl(345, 0%, 97%))
+}
+main {
+	position: relative;
+	.block {
+		&__text {
+			max-width: 500px;
+		}
 	}
 }
 section {
-	display: table;
-	table-layout: fixed;
-	width: 100%;
+	background: #faebd7;
+	position: relative;
+	width: calc(100% - 5em);
+	height: auto;
+	min-height: 300px;
 	background: repeating-linear-gradient(180deg, transparent, transparent calc(8.33333vw - 1px), rgba(255, 255, 255, 1) calc(8.33333vw - 1px), rgba(255, 255, 255, 1) 8.33333vw);
+	
+}
+.max-h {
+	height: 100vh;
+}
+.mb-5 {
+	margin-bottom: 5rem;
+}
+.container {
+	max-width: 1200px;
+	@include bp(sm) {
+		padding-left: 7em;
 	}
-
-
+	
+}
+.section__title {
+	&-main {
+		font-size: 15vw;
+		font-weight: 300;
+		font-family: $font-title;
+		line-height: 0.8;
+	}
+	&-sub {
+		margin-bottom: 0.5em;
+		font-size: 10vw;
+		font-weight: 300;
+		font-family: $font-title;
+	}
+	
+}
 
 

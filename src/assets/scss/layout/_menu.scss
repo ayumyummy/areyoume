@@ -1,14 +1,31 @@
 #menu {
-	top: 11.11111vw;
-	right: 8.33333vw;
-	position: fixed;
-	color: black;
+	color: #0e1111;
 	z-index: 999;
-	font-size: $base-size / 10;
+	
 	font-family: $font-base;
+	position: fixed;
+	left: 0;
+	bottom: -4.2rem;
+	width: 100vh;
+	
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 	ul {
-		border: 1px solid black;
-		padding: 10px;
+		border-bottom: 1px solid #0e1111;
+		padding: 20px 10px;
+		background: white;
+		display: flex;
+		font-size: $base-size * 2;
+		justify-content: space-around;
+		margin: 0;
+		li {
+			 cursor: pointer;
+		}
+		 a {
+			 font-size: 2rem;
+		 }
 	}
 
 }

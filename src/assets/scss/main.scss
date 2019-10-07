@@ -12,6 +12,7 @@
 // Base.
 
 	// @import 'base/page';
+	@import 'helper/breakpoints';
 	@import 'base/typography';
 
 // Component.
@@ -41,3 +42,6 @@
 // helper.
 
 @import 'helper/hover';
+@import 'helper/number';
+
+@import 'helper/skillChart';
