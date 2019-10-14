@@ -4,12 +4,21 @@
 	
 #landing {
 	position: relative;
-	
 	h1 {
 		font-family: $font-title;
-		color: #0e1111;
 		margin: 0;
+		font-size: 17.5vw;
 		white-space: nowrap;
+		position: relative;
+		left: 0.5vw;
+		text-transform: lowercase;
+		@include sm {
+			white-space: unset;
+		}
+	}
+	h2 {
+		font-size: 24px;
+		line-height: 1.5;
 	}
 	.title {
 		position: absolute;
@@ -19,58 +28,30 @@
 	}
 }
 /*tag line*/
-.tagLine {
-	height: 5vw;
+.clients {
 	position: relative;
 	width: 100vw;
-	font-size: 0;
-	line-height: 0;
-	overflow: hidden;
-	.inner {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 9;
-		white-space: nowrap;
-		animation-name: endless_tag;
-		animation-iteration-count: infinite;
-		animation-duration: 2s;
-		animation-timing-function: linear;
-		// will-change: transform;
-		transition: ease-out .2s;
-		span {
-			font-family: $font-base;
-			font-size: 2.5vw;
-			line-height: 5vw;
-			font-weight: 600;
-			color: #E5E5E5;
-			letter-spacing: 2px;
-		}
-	}
+	max-width: 100%;
+	height: 100px;
+	overflow-x: hidden;
+	
 }
 
-
-
-@-webkit-keyframes endless_tag {
-	0% {
-		-webkit-transform: translate3d(0%, 0, 0);
-		transform: translate3d(0%, 0, 0);
-	}
-
-	100% {
-		-webkit-transform: translate3d(-20.1%, 0, 0);
-		transform: translate3d(-20.1%, 0, 0);
-	}
+.tagline {
+	position: absolute;
+	white-space: nowrap;
+	will-change: transform;
+	font-size: 2rem!important;
+	animation: telop 32s linear infinite;
+	color: rgb(151, 151, 151);
 }
 
-@keyframes endless_tag {
-	0% {
-		-webkit-transform: translate3d(0%, 0, 0);
-		transform: translate3d(0%, 0, 0);
+@keyframes telop {
+	from {
+		transform: translateX(0);
 	}
 
-	100% {
-		-webkit-transform: translate3d(-20.1%, 0, 0);
-		transform: translate3d(-20.1%, 0, 0);
+	to {
+		transform: translateX(-50%);
 	}
 }

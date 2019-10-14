@@ -7,21 +7,7 @@ import Menu from "./Menu"
 const Header = (props) => (
       <header id="header" className="">
           <Menu />
-          <div class="tagLine">
-            <div className="inner">
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-              <span>popcorn - </span>
-            </div>
-          </div>
+         
       </header>
       
     );

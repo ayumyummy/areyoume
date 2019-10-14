@@ -19,7 +19,6 @@ class Skill extends React.Component {
 
     return (
       <div className={`skill-container ${collapsed ? 'collapsed' : ''}`}>
-        <hr />
         <ul className="skills">
           {skills.map((skill, index) =>
             <li

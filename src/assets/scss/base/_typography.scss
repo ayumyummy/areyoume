@@ -35,7 +35,7 @@ $font-weight-bold: 800;
 $border-color: #DADADA;
 
 $black: #0e1111;
-
+$white: #efefef;
 /*------------------------------------*\
     # Type
 \*------------------------------------*/
@@ -44,7 +44,6 @@ $black: #0e1111;
 *,
 html,
 body {
-    font-size: $base-size;
     font-family: $font-base;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -74,11 +73,8 @@ $header-color: #0e1111;
 h1,
 h2,
 h3,
-h4,
-h5,
 h6 {
     margin-top: $header-margin * 1.5;
-    color: $header-color;
     line-height: 1;
     font-weight: 500;
     z-index: 10;
@@ -96,11 +92,13 @@ h2 {
     font-size: calc(1.5rem + 1vw);
     margin-bottom: $header-margin / 1.3;
     font-weight: 100;
+     color: $header-color;
 }
 
 h3 {
     font-size: $base-size / 1.5;
     margin-bottom: $header-margin / 1.5;
+     color: $header-color;
 }
 
 h4 {
@@ -125,28 +123,19 @@ span {
 
 
 // Paragraphs
-p {
-    margin-bottom: $paragraph-margin;
-    font-size: $paragraph-size;
-    line-height: $paragraph-line-height;
-    color: $paragraph-color;
 
-    &:last-of-type {
-        margin-bottom: 0;
-    }
-}
 
 
 
 // Links
-a {
+a,
+.bug_link {
     position: relative;
-    color: #0e1111;
     letter-spacing: 1px;
     text-decoration: none;
     
     &:hover {
-        color: #0e1111;
+        color: $black;
 
         &::before {
             content: attr(data-text);
@@ -173,7 +162,12 @@ a {
             animation: bug2 1s infinite linear alternate-reverse;
         }
     }
-
+}
+.dark-mode main a {
+    color: $white;
+}
+.light-mode main a {
+    color: $black;
 }
 @keyframes bug {
     0% {

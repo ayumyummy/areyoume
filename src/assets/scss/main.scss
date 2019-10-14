@@ -12,7 +12,7 @@
 // Base.
 
 	// @import 'base/page';
-	@import 'helper/breakpoints';
+	@import 'base/breakpoints';
 	@import 'base/typography';
 
 // Component.
@@ -30,18 +30,18 @@
 	// @import 'components/spotlights';
 
 // Layout.
-
+	@import 'layout/menu';
 	@import 'layout/header';
 	// @import 'layout/banner';
 	@import 'layout/main';
 	// @import 'layout/contact';
 	@import 'layout/footer';
 	// @import 'layout/wrapper';
-	@import 'layout/menu';
+	
 
 // helper.
 
 @import 'helper/hover';
 @import 'helper/number';
-
+@import 'helper/global';
 @import 'helper/skillChart';
