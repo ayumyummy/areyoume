@@ -6,8 +6,8 @@
 		position: relative;
 		bottom: 0; 
 		padding-left: 0;
-		@include sm {
-			padding-left: 7em;
+		@include md {
+			padding-left: 0;
 		}
 		
 		li {
