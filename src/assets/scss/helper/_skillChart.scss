@@ -5,6 +5,7 @@
     margin: auto;
     max-width: 1200px;
     justify-content: right;
+    padding: 5px;
     .box__inner {
         background: transparent;
         padding: 10px 15px;
@@ -33,6 +34,9 @@
 
 .light-mode .skill-container {
     width: calc(100% - 10rem);
+    @include md {
+          width: 100%;
+    }
     h3 {
         color: transparent ;
     }
@@ -81,7 +85,7 @@
     margin: auto;
     max-width: 1200px;
     justify-content: right;
-
+    padding: 5px;
     .box__inner {
         background: transparent;
         padding: 10px 15px;
@@ -112,7 +116,10 @@
 }
 
 .dark-mode .skill-container {
-    width: calc(100% - 10rem);
+   width: calc(100% - 10rem);
+    @include md {
+          width: 100%;
+    }
 
     h3 {
         color: transparent;
