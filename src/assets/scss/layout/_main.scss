@@ -1,6 +1,7 @@
 
 /* global.css */
 body {
+	margin: 0;
 	cursor: url('../images/target.png'),
 	cursor;
 	overflow-x: hidden;
@@ -41,9 +42,9 @@ body {
 	}
 	main {
 		position: relative;
-		padding-left: 8vw;
+		
 		@include md {
-			padding: 20px 20px 50px;
+			// padding: 20px 20px 50px;
 		}
 		.block {
 			&__text {
@@ -52,15 +53,16 @@ body {
 		}
 	}
 	section {
+		
 		// background: #faebd7;
 		position: relative;
 		width: calc(100% - 5em);
 		height: auto;
 		min-height: 300px;
 		margin-bottom: 3rem;
+		padding: 20px 20px 50px 8vw;
 		// background: repeating-linear-gradient(180deg, transparent, transparent calc(8.33333vw - 1px), rgba(255, 255, 255, 1) calc(8.33333vw - 1px), rgba(255, 255, 255, 1) 8.33333vw);
 		@include sm {
-			width: 100%;
 			
 		}
 

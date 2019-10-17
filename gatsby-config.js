@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `are you me?`,
-    description: `ayumi mamiya / front end developer / web designer`,
-    author: `@gatsbyjs`,
+    description: `ayumi mamiya / frontend developer / web designer`,
+    author: `are you me?`,
+    siteUrl: `https://areyoumee.com`
   },
   plugins: [
-    'gatsby-plugin-dark-mode',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -28,8 +28,15 @@ module.exports = {
         icon: `src/assets/images/areyoume.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-WZF6T52",
+        includeInDevelopment: false,
+      },
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline'
-    
   ],
+  
 }

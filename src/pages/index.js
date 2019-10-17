@@ -8,12 +8,12 @@ import About from '../sections/About';
 import Contact from '../sections/Contact';
 import TagLine from '../components/Tag';
 import Footer from '../components/Footer';
-
+import DrawingLine from "../components/Drawing"
 const IndexPage = () => (
   
   <Layout>
     <Helmet
-        title="Are you me ?"
+        title="are you me ?"
         meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
@@ -21,6 +21,7 @@ const IndexPage = () => (
     >
     </Helmet>
     <SEO title="Home" />
+    <DrawingLine />
     <Landing />
     <TagLine/>
     <About />
