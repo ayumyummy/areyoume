@@ -4,6 +4,7 @@ body {
 	cursor: url('../images/target.png'),
 	cursor;
 	overflow-x: hidden;
+	margin: 0;
 	&.dark-mode {
 		cursor: url('../images/target.png'),
 		cursor;
@@ -27,10 +28,11 @@ body {
 		-webkit-font-smoothing: antialiased;
 		background-color: #efefef;
 		background-image:
-			linear-gradient(rgba(196, 196, 196, 0.404) 2px, transparent 2px),
-			linear-gradient(90deg, rgba(196, 196, 196, 0.414) 2px, transparent 2px),
-			linear-gradient(rgba(196, 196, 196, 0.104) 1px, transparent 1px),
-			linear-gradient(90deg, rgba(196, 196, 196, 0.104) 1px, transparent 1px);
+			linear-gradient(rgb(243, 243, 243) 2px, transparent 2px),
+			linear-gradient(90deg, rgb(243, 243, 243) 2px, transparent 2px),
+			linear-gradient(rgb(247, 247, 247) 1px,
+			transparent 1px),
+			linear-gradient(90deg, rgb(247, 247, 247) 1px, transparent 1px);
 		background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
 		background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 		#landing h1 {
@@ -40,9 +42,8 @@ body {
 	}
 	main {
 		position: relative;
-		padding-left: 8vw;
 		@include md {
-			padding: 20px 20px 50px;
+			padding: 20px 0px 50px;
 		}
 		.block {
 			&__text {
@@ -57,9 +58,10 @@ body {
 		height: auto;
 		min-height: 300px;
 		margin-bottom: 3rem;
-		// background: repeating-linear-gradient(180deg, transparent, transparent calc(8.33333vw - 1px), rgba(255, 255, 255, 1) calc(8.33333vw - 1px), rgba(255, 255, 255, 1) 8.33333vw);
-		@include sm {
+		padding-left: 8vw;
+		@include md {
 			width: 100%;
+			padding: 0px 20px 0px;
 			
 		}
 
@@ -70,7 +72,7 @@ body {
 
 
 .max-h {
-	height: 100vh;
+	height: 90vh;
 }
 .mb-5 {
 	margin-bottom: 5rem;
@@ -93,7 +95,7 @@ body {
 		font-family: $font-title;
 		line-height: 0.8;
 		margin-bottom: 4rem;
-		color: #efefef;
+		color: #f3f3f3;
 		text-shadow:
 		-1px -1px 0 #000,
 		1px -1px 0 #000,
@@ -133,7 +135,6 @@ body {
 		margin-bottom: 1rem;
 
 	}
-	
 }
 
 body.light-mode {
@@ -144,6 +145,10 @@ body.light-mode {
 
 body.dark-mode {
 	background-color: #1a1919;
+	.text-noir {
+		color: rgb(129, 129, 129);
+		font-family: $font-title;
+	}
 }
 // .unactive {
 // 	color: #efefef;
@@ -160,10 +165,10 @@ body.dark-mode {
 		line-height: 1;
 	}
 	.indent-1 {
-		text-indent: 1rem;
+		padding-left: 1rem;
 	}
 	.indent-2 {
-		padding-left:2rem;
+		padding-left: 2rem;
 	}
 	.indent-3 {
 		padding-left: 3rem;

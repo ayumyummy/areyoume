@@ -1,6 +1,6 @@
 #menu {
-	z-index: 9999999;
-	font-family: $font-base;
+  font-family: $font-base;
+  background: white;
 	a {
     color: $black !important;
      @include md {
@@ -8,29 +8,29 @@
      }
   }
   .main-nav {
+    z-index: 9999999;
     width:100vh;    
-    height:45px;
+    height:67px;
     position:fixed;
     background: white;
     -webkit-transform-origin: left top;
     -webkit-transform:rotate(-90deg) translateX(-100%);
+    border-bottom: 1px solid $black;
     @include md {
       transform: rotate(0deg);
       transform-origin: bottom center;
       bottom: 0;
+      height: 45px;
       top: auto;
       flex-direction: row-reverse;
       margin: 0;
       z-index: 99999;
+      width: 100%;
+      border-top: 1px solid $black;
       
     }
   }
-   li {    
-    margin-right: 20px;
-    float:right;
-    height:100%;
-    line-height: 45px;
-  }
+ 
 	ul {
 		width: 100vh;
 		// transform: rotate(-90deg) translateX(-620px);
@@ -39,23 +39,9 @@
 		position: fixed;
 		top: 0;
 		z-index: 99999;
-		border-bottom: 1px solid $black;
 		padding: 0 10px;
-		background: white;
 		display: flex;
 		justify-content: flex-end;
-
-		// justify-content: unset;
-		// margin: 0;
-		// position: sticky;
-		// // left: 0;
-		// // bottom: -3.5rem;
-		// width: 100vh;
-		// height: 3.3rem;
-		// transform-origin: bottom left;
-		// transform: rotate(-90deg) translateX(-60px);
-		// z-index: 999;
-		// font-size: 0.7rem;
 		@include md {
 			transform: rotate(0deg);
       transform-origin: bottom center;
@@ -64,11 +50,14 @@
 			top: auto;
 			flex-direction: row-reverse;
       margin: 0;
-      border-top: 1px solid $black;
 		}
 		li {
 			 cursor: pointer;
        padding: 0 10px;
+       margin-right: 20px;
+       float:right;
+       height:100%;
+       line-height: 1;
        @include md {
          padding: 0;
         
@@ -90,14 +79,7 @@
 
 body.light-mode {
   -webkit-font-smoothing: antialiased;
-  background-color: #efefef;
-  background-image:
-    linear-gradient(rgba(196, 196, 196, 0.404) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(196, 196, 196, 0.414) 2px, transparent 2px),
-    linear-gradient(rgba(196, 196, 196, 0.104) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(196, 196, 196, 0.104) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  
 
   color: #333;
   transition: background-color 0.3s ease;

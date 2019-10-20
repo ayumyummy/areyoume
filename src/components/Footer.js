@@ -5,8 +5,8 @@ const Footer = (props) => (
     <div className="inner">
   
     <ul>
-      <li>&copy; 2019 — built by me</li>
-      <li>all rights reserved</li>
+        <li>&copy; 2019 — built by me — all rights reserved</li>
+      
     </ul>
     
     </div>

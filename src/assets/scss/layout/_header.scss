@@ -41,9 +41,10 @@
 	position: absolute;
 	white-space: nowrap;
 	will-change: transform;
-	font-size: 2rem!important;
+	font-size: 1.5rem!important;
+	z-index: -1;
 	animation: telop 32s linear infinite;
-	color: rgb(151, 151, 151);
+	color: rgba(212, 212, 212, 0.3);
 }
 
 @keyframes telop {

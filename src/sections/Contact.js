@@ -11,15 +11,12 @@ const Contact = (props) => (
                 className="text-large-email">toietmoi@areyoumee.com</a>
             </div> */}
             <div className="block-indent title">
-              <h3>
-                    <p className="indent-1"><a href="mailto:toietmoi@areyoumee.com" rel="noopener noreferrer" data-text="toietmoi@areyoumee.com">> toietmoi@areyoumee.com</a></p>
-                <p className="indent-1">> instagram</p>
-                    <p className="indent-2"><a href="https://www.instagram.com/ayumyummy/" target="_blank" rel="noopener noreferrer" data-text=" @ayumyummy">> @ayumyummy</a></p>
-                <p className="indent-1">> twitter</p>
-                    <p className="indent-2"><a href="https:////twitter.com/ayumyummy" target="_blank" rel="noopener noreferrer" data-text=" @ayumyummy">> @ayumyummy</a></p>
-                <p className="indent-1">> linkedin</p>
-                    <p className="indent-2"><a href="https://www.linkedin.com/in/ayumimamiya/" target="_blank" rel="noopener noreferrer" data-text=" @ayumimamiya">> @ayumimamiya</a></p>
-              </h3>
+              
+                <p className="indent-1"><a href="mailto:toietmoi@areyoumee.com" rel="noopener noreferrer" data-text="> toietmoi@areyoumee.com">> toietmoi@areyoumee.com</a></p>
+                <p className="indent-1"><a href="https://www.instagram.com/ayumyummy/" target="_blank" rel="noopener noreferrer" data-text="> instagram">> instagram</a></p>
+                <p className="indent-1"><a href="https:////twitter.com/ayumyummy" target="_blank" rel="noopener noreferrer" data-text="> twitter">> twitter</a></p>
+                <p className="indent-1"><a href="https://www.linkedin.com/in/ayumimamiya/" target="_blank" rel="noopener noreferrer" data-text="> linkedin">> linkedin</a></p>
+          
             </div>
         </div>
     </section>
