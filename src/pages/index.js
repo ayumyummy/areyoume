@@ -8,7 +8,7 @@ import About from '../sections/About';
 import Contact from '../sections/Contact';
 import TagLine from '../components/Tag';
 import Footer from '../components/Footer';
-import DrawingLine from "../components/Drawing"
+// import DrawingLine from "../components/Drawing"
 const IndexPage = () => (
   
   <Layout>
@@ -21,7 +21,7 @@ const IndexPage = () => (
     >
     </Helmet>
     <SEO title="Home" />
-    <DrawingLine />
+    {/* <DrawingLine /> */}
     <Landing />
     <TagLine/>
     <About />
