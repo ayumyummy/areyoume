@@ -21,7 +21,7 @@ const Tool = (props) => (
         <div className="box__inner">
           <span className="level">98</span>
           <div className="title">seo</div>
-          <div className="titleFull">searching</div>
+          <div className="titleFull">google</div>
         </div>
         <div className="box__inner">
           <span className="level">90</span>
@@ -61,6 +61,11 @@ const Tool = (props) => (
          <span className="level">85</span>
          <div className="title">Dw</div>
          <div className="titleFull">Dreamweaver</div>
+       </div>
+       <div className="box__inner">
+         <span className="level">98</span>
+         <div className="title">In</div>
+         <div className="titleFull">Indesign</div>
        </div>
      
       </div>
