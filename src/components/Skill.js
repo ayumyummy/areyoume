@@ -12,7 +12,11 @@ class Skill extends React.Component {
       this.setState({ collapsed: false })
     }, 1000);
   }
-
+  componentWillMount() {
+    setTimeout(() => {
+      this.setState({ collapsed: false })
+    }, 1000);
+  }
   render() {
     const { collapsed } = this.state;
     const { hue, saturation, skills } = this.props;
