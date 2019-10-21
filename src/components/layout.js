@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           <Pointer onMouseMove={e => this.handleMouseMove(e)} />
         </ReactCursorPosition> */}
          <div className="cursor">
-          <img src="https://www.evoworx.co.jp/wp2/wp-content/themes/evoworx2017/common/image/dog_red.png" alt="" />
+          {/* <img src="https://www.evoworx.co.jp/wp2/wp-content/themes/evoworx2017/common/image/dog_red.png" alt="" /> */}
 
         </div>
         <div className="navbar">

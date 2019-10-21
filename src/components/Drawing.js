@@ -4,7 +4,7 @@ import InlineSVG from "svg-inline-react";
 
 const svgSource = `<svg id="line-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="173px" height="567.5px" viewBox="0 0 173 567.5" enable-background="new 0 0 173 567.5" xml:space="preserve">
-<line id="line-path" fill="none" stroke-width="4.8484" stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10" x1="86.5" y1="5" x2="86.5" y2="662.5"/>
+<line id="line-path" fill="none" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10" x1="86.5" y1="5" x2="86.5" y2="662.5"/>
   </svg>`;
 
 class DrawingLine extends Component {
