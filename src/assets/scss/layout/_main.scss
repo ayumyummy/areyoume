@@ -1,12 +1,16 @@
 
 /* global.css */
+html {
+	cursor: url('/target.png'), cursor;
+	
+}
 body {
-	cursor: url('../images/target.png'),
-	cursor;
+	
 	overflow-x: hidden;
 	margin: 0;
+	
 	&.dark-mode {
-		cursor: url('../images/target.png'),
+		cursor: url('/target.png'),
 		cursor;
 		-webkit-font-smoothing: antialiased;
 	background-color: #2b2b2b;
@@ -23,7 +27,7 @@ body {
 		}
 	}
 	&.light-mode {
-		cursor: url('../images/target.png'),
+		cursor: url('/target.png'),
 		cursor;
 		-webkit-font-smoothing: antialiased;
 		background-color: #efefef;

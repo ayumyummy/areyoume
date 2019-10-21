@@ -52,6 +52,7 @@
       margin: 0;
 		}
 		li {
+      font-size: 3.4vh;
 			 cursor: pointer;
        padding: 0 10px;
        margin-right: 20px;
@@ -75,12 +76,21 @@
 		bottom: 3rem;
 	}
 }
-
-
+#line-svg{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 550px;
+  margin: -75px 0 0 -75px;
+}
+.draw-line-height {
+  height: 5000px;
+  z-index: -2;
+  position: fixed;
+}
 body.light-mode {
   -webkit-font-smoothing: antialiased;
-  
-
   color: #333;
   transition: background-color 0.3s ease;
   p {
@@ -92,6 +102,9 @@ body.light-mode {
     &:last-of-type {
         margin-bottom: 0;
     }
+  }
+  #line-path {
+    stroke: #333!important;
   }
 }
 
@@ -107,6 +120,10 @@ body.dark-mode {
 			margin-bottom: 0;
 		}
 	}
+  #line-path {
+    stroke: $white!important;
+    
+  }
 }
 
 

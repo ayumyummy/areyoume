@@ -42,14 +42,16 @@
 }
 
 .cursor {
-    position: fixed;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    // pointer-events:none;
-
-    img {
-        width: 100%;
-    }
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  z-index: 9999999999;
+  cursor: none;
+  posinter-events: none;
+  
+  img {
+    width: 100%;
+  }
 }
