@@ -32,9 +32,9 @@ class TabAbout extends React.Component {
   render() {
     return (
       <div id="skills-tool">
-        <CoolTabs className="tabsHeaderClassName"
+        <CoolTabs 
           tabKey={'1'}
-          style={{ width: 'auto', height: 950, background: 'transparent' }}
+          // style={{ width: 'auto', height: 950, background: 'transparent' }}
           tabsHeaderStyle={{ height: 'auto', width: 'auto'}}
           activeTabStyle={{ background: 'transparent', color: '#0e1111' }}
           unActiveTabStyle={{ color: '#efefef', textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }}

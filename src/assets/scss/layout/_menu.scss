@@ -9,18 +9,21 @@
   }
   .main-nav {
     z-index: 9999;
-    width:100vh;    
-    height:67px;
-    position:fixed;
+    width: 100vh;    
+    height: 90px;
+    position: fixed;
     background: white;
     -webkit-transform-origin: left top;
     -webkit-transform:rotate(-90deg) translateX(-100%);
     border-bottom: 1px solid $black;
+    @include xl {
+      height: 80px;
+    }
     @include md {
       transform: rotate(0deg);
       transform-origin: bottom center;
       bottom: 0;
-      height: 45px;
+      height: 77px;
       top: auto;
       flex-direction: row-reverse;
       margin: 0;
@@ -28,6 +31,10 @@
       width: 100%;
       border-top: 1px solid $black;
       
+    }
+    @include sm {
+      height: 77px;
+
     }
   }
     
