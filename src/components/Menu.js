@@ -7,7 +7,7 @@ const Menu = (props) => (
       <div className="main-nav">
         <ul className="items">
           <li><AnchorLink href="#contact" data-text="#3 contact" >#3 contact</AnchorLink></li>
-          <li><AnchorLink href="#skills-tool" data-text="#2 skills & tools" >#2 skills & tools</AnchorLink></li>
+        <li><AnchorLink href="#skills-tool" data-text="#2 skills&nbsp;&&nbsp;tools" >#2 skills&nbsp;&&nbsp;tools</AnchorLink></li>
           <li><AnchorLink href="#about" data-text="#1 about" >#1 about</AnchorLink></li>
         </ul>
       </div>

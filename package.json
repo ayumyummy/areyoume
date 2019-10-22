@@ -21,10 +21,8 @@
     "react": "^16.9.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-cool-tabs": "^1.1.6",
-    "react-cursor-position": "^3.0.3",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react-responsive-tabs": "^3.3.0",
     "svg-inline-react": "^3.2.0",
     "use-dark-mode": "^2.3.1"
   },
