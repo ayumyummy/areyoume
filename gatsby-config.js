@@ -5,7 +5,6 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    'gatsby-plugin-dark-mode',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -14,7 +13,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    'gatsby-plugin-dark-mode',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -30,7 +28,15 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    {
+			resolve: `gatsby-plugin-google-tagmanager`,
+			options: {
+				id: "GTM-WZF6T52",
+				includeInDevelopment: false,
+			},
+		},
     
   ],
+
 }

@@ -21,23 +21,22 @@ class DrawingLine extends Component {
   }
 
   drawingLine() {
-let path = document.querySelector('#line-path');
+    let path = document.querySelector('#line-path');
 
-// Get length of path... ~577px in this case
-let pathLength = path.getTotalLength();
+    // Get length of path... ~577px in this case
+    let pathLength = path.getTotalLength();
 
-// Make very long dashes (the length of the path itself)
-path.style.strokeDasharray = pathLength + ' ' + pathLength;
+    // Make very long dashes (the length of the path itself)
+    path.style.strokeDasharray = pathLength + ' ' + pathLength;
 
-// Offset the dashes so the it appears hidden entirely
-path.style.strokeDashoffset = pathLength;
+    path.style.strokeDashoffset = pathLength;
 
-// Jake Archibald says so
-// https://jakearchibald.com/2013/animated-line-drawing-svg/
-path.getBoundingClientRect();
+    // Jake Archibald says so
+    // https://jakearchibald.com/2013/animated-line-drawing-svg/
+    path.getBoundingClientRect();
 
-  // When the page scrolls...
-  window.addEventListener("scroll", (e) => {
+    // When the page scrolls...
+    window.addEventListener("scroll", (e) => {
   
 
     let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
@@ -64,7 +63,7 @@ path.getBoundingClientRect();
   render() {
     return (
       <div className="draw-line-height">
-      <InlineSVG src={svgSource} />
+        <InlineSVG src={svgSource} />
       </div>
      
     )

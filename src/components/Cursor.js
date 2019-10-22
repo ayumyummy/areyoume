@@ -1,92 +1,66 @@
-import React, { Component } from "react"
-import { TweenMax } from "gsap/all"
-// import styled from "styled-components"
+import React, { Component } from "react";
+// import InlineSVG from "svg-inline-react";
+import { TweenMax } from "gsap/TweenMax";
 
 class Cursor extends Component {
 
-    constructor(props) {
-        super(props)
-        this.createCursor = this.createCursor.bind(this)
-    }
+  constructor(props) {
+    super(props)
+    this.cursorIcon = this.cursorIcon.bind(this)
+  }
+  componentDidMount() {
+    this.cursorIcon()
+  }
 
-    componentDidMount() {
-        this.createCursor()
-    }
+  cursorIcon() {
+    let cursor = document.querySelector('.cursor'),
+        follower = document.querySelector(".cursor-follower");
 
-    createCursor() {
-        const cursor = this.cursor;
+   let posX = 0,
+       posY = 0;
 
-        let posX = 0,
-            posY = 0;
+   let mouseX = 0,
+       mouseY = 0;
 
-        let mouseX = 0,
-            mouseY = 0;
+   TweenMax.to({}, 0.016, {
+     repeat: -1,
+     onRepeat: function() {
+       posX += (mouseX - posX) / 10;
+       posY += (mouseY - posY) / 10;
 
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-        })
+       TweenMax.set(follower, {
+           css: {    
+           left: posX - 10,
+           top: posY - 10
+           }
+       });
 
-        TweenMax.to({}, 0.016, {
-            repeat: -1,
-            onRepeat: function () {
-                posX += (mouseX - posX) / 10;
-                posY += (mouseY - posY) / 10;
+       TweenMax.set(cursor, {
+           css: {    
+           left: mouseX,
+           top: mouseY
+           }
+       });
+     }
+   });
 
-                
+    document.addEventListener('mousemove', (e) => {
+       mouseX = e.pageX;
+       mouseY = e.pageY;
+   });
 
-                TweenMax.set(cursor, {
-                    css: {
-                        left: mouseX,
-                        top: mouseY
-                    }
-                });
-            }
-        });
+};
 
-
-        let anchors = document.getElementsByTagName("A");
-        let buttons = document.getElementsByTagName("BUTTON");
-
-        if (anchors) {
-            for (let i = 0; i < anchors.length; i++) {
-                anchors[i].addEventListener("mouseenter", () => {
-                    cursor.classList.add("active");
-                  
-                    console.log('hovered')
-                });
-            }
-            for (let i = 0; i < anchors.length; i++) {
-                anchors[i].addEventListener("mouseleave", () => {
-                    cursor.classList.remove("active");
-                });
-            }
-        };
-        
-        if (buttons) {
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].addEventListener("mouseenter", () => {
-                    cursor.classList.add("active");
-                });
-            }
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].addEventListener("mouseleave", () => {
-                    cursor.classList.remove("active");
-                });
-            }
-        };
-
-    }
-
-    render() {
-        return (
-            <>
-                <Cursor ref={cursor => this.cursor = cursor} />
-               
-            </>
-        )
-    }
+  render() {
+    return (
+      <>
+     <div className="cursor"></div>
+      <div className="cursor-follower"></div>
+     </>
+    )
+  }
 }
-
-
 export default Cursor
+
+
+

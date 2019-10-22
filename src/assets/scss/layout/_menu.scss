@@ -8,7 +8,7 @@
      }
   }
   .main-nav {
-    z-index: 9999999;
+    z-index: 9999;
     width:100vh;    
     height:67px;
     position:fixed;
@@ -30,7 +30,10 @@
       
     }
   }
- 
+    
+    .cursor, .cursor-follower  {
+			background-color: $black;
+		}
 	ul {
 		width: 100vh;
 		// transform: rotate(-90deg) translateX(-620px);
@@ -53,7 +56,6 @@
 		}
 		li {
       font-size: 3.4vh;
-			 cursor: pointer;
        padding: 0 10px;
        margin-right: 20px;
        float:right;
@@ -88,6 +90,7 @@
   height: 5000px;
   z-index: -2;
   position: fixed;
+
 }
 body.light-mode {
   -webkit-font-smoothing: antialiased;

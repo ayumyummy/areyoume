@@ -9,7 +9,7 @@ import DarkMode from './DarkMode/DarkMode';
 import '../assets/scss/main.scss'
 import '../assets/js/main.js'
 
-// import Cursor from "./Cursor"
+import Cursor from "./Cursor"
 
 // import Header from "./Effect"
 const Layout = ({ children }) => {
@@ -28,15 +28,7 @@ const Layout = ({ children }) => {
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <div>
-        {/* <Cursor/> */}
-        {/* <ReactCursorPosition>
-        <CursorPosition>
-          <Pointer onMouseMove={e => this.handleMouseMove(e)} />
-        </ReactCursorPosition> */}
-         <div className="cursor">
-          {/* <img src="https://www.evoworx.co.jp/wp2/wp-content/themes/evoworx2017/common/image/dog_red.png" alt="" /> */}
-
-        </div>
+        <Cursor/>
         <div className="navbar">
           <DarkMode />
         </div>

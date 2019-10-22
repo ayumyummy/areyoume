@@ -40,18 +40,34 @@
 .block__link:hover {
     letter-spacing: .1em;
 }
-
 .cursor {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0; 
-  z-index: 9999999999;
-  cursor: none;
-  posinter-events: none;
-  
-  img {
-    width: 100%;
-  }
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1);
+    mix-blend-mode: difference;
 }
+
+.cursor-follower {
+    position: absolute;
+    // background-color: rgba(255, 255, 255, 0.3);
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    z-index: 99999999;
+    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(5px, 5px);
+    mix-blend-mode: difference;
+}
+

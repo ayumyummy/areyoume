@@ -31,7 +31,7 @@ class Content2 extends React.Component {
 class TabAbout extends React.Component {
   render() {
     return (
-      <div>
+      <div id="skills-tool">
         <CoolTabs className="tabsHeaderClassName"
           tabKey={'1'}
           style={{ width: 'auto', height: 950, background: 'transparent' }}
@@ -39,7 +39,7 @@ class TabAbout extends React.Component {
           activeTabStyle={{ background: 'transparent', color: '#0e1111' }}
           unActiveTabStyle={{ color: '#efefef', textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }}
           rightTabTitle={<h4 className="section__title-tab bug_link" data-text="tools">tools </h4>}
-          leftTabTitle={<h4 className="section__title-tab bug_link pr-3" data-text="skills">skills</h4>}
+          leftTabTitle={<h4 className="section__title-tab bug_link mr-3" data-text="skills">skills</h4>}
           leftContent={<Content1 />}
           rightContent={<Content2 />}
           contentTransitionStyle={'transform 0.3s ease-in'}
