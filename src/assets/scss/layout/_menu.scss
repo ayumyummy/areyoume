@@ -3,6 +3,7 @@
   background: white;
 	a {
     color: $black !important;
+    line-height: 1;
      @include md {
       letter-spacing: -1px;
      }
@@ -23,7 +24,7 @@
       transform: rotate(0deg);
       transform-origin: bottom center;
       bottom: 0;
-      height: 77px;
+      height: 55px;
       top: auto;
       flex-direction: row-reverse;
       margin: 0;
@@ -32,10 +33,7 @@
       border-top: 1px solid $black;
       
     }
-    @include sm {
-      height: 77px;
-
-    }
+   
   }
     
     .cursor, .cursor-follower  {
@@ -67,7 +65,7 @@
        margin-right: 20px;
        float:right;
        height:100%;
-       line-height: 1;
+       line-height: 40px;
        @include md {
          padding: 0;
         
@@ -124,7 +122,7 @@ body.dark-mode {
 		margin-bottom: $paragraph-margin;
 		font-size: $paragraph-size;
 		line-height: $paragraph-line-height;
-		color:#8f8f8f;
+		color:#c2c2c2;
 
 		&:last-of-type {
 			margin-bottom: 0;

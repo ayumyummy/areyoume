@@ -1,6 +1,6 @@
 import React from 'react'
 
-import TabAbout from '../components/TabAbout';
+import TabItems from '../components/Tabs';
 
 const About = (props) => (
     <section id="about">
@@ -34,7 +34,7 @@ const About = (props) => (
           </h3>
         </div>
        
-        <TabAbout/>
+      <TabItems/>
         
       
       </div>

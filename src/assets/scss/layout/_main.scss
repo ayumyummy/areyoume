@@ -22,9 +22,7 @@ body {
 		#landing h1 {
 			color: $white!important;
 		}
-		.cursor, .cursor-follower {
-			background-color: $white;
-		}
+		
 	}
 	&.light-mode {
 		-webkit-font-smoothing: antialiased;
@@ -40,14 +38,12 @@ body {
 		#landing h1 {
 			color: $black!important;
 		}
-		.cursor, .cursor-follower  {
-			background-color: $black;
-		}
+		
 	}
 	main {
 		position: relative;
 		@include md {
-			padding: 20px 0px 50px;
+			padding: 1rem 0px 5rem;
 		}
 		.block {
 			&__text {
@@ -58,15 +54,20 @@ body {
 	section {
 		// background: #faebd7;
 		position: relative;
-		width: calc(100% - 5em);
+		// width: calc(100% - 5em);
 		height: auto;
 		min-height: 300px;
 		margin-bottom: 3rem;
-		padding-left: 8vw;
+		margin-left: 10vw;
+		padding-right: 1rem;
+		@include lg {
+			margin-left: 10vw;
+
+		}
 		@include md {
 			width: calc(100% - 40px);
 			padding: 0px 20px 0px;
-			
+			margin-left: 0;
 		}
 
 	}
@@ -138,7 +139,6 @@ body {
 		font-size: 15vw;
 		font-weight: 300;
 		font-family: $font-title;
-		line-height: 0;
 		margin-bottom: 1rem;
 
 	}
@@ -152,6 +152,9 @@ body.light-mode {
 
 body.dark-mode {
 	background-color: #1a1919;
+	p {
+		color: rgb(167, 167, 167);
+	}
 	.text-noir {
 		color: rgb(129, 129, 129);
 		font-family: $font-title;
