@@ -57,8 +57,8 @@ body {
 		// width: calc(100% - 5em);
 		height: auto;
 		min-height: 300px;
-		margin-bottom: 3rem;
-		margin-left: 10vw;
+		margin-bottom: 6rem;
+		margin-left: 8vw;
 		padding-right: 1rem;
 		@include lg {
 			margin-left: 10vw;
@@ -77,7 +77,7 @@ body {
 
 
 .max-h {
-	height: 90vh;
+	height: 80vh;
 }
 .mb-5 {
 	margin-bottom: 5rem;
@@ -101,9 +101,9 @@ body {
 		font-size: 15vw;
 		font-weight: 300;
 		font-family: $font-title;
-		line-height: 0.8;
+		line-height: 1;
 		margin-bottom: 4rem;
-		color: $white;
+		color: white;
 		text-shadow:
 		-1px -1px 0 #000,
 		1px -1px 0 #000,
@@ -122,10 +122,7 @@ body {
 				top: -10px;
 			}
 		}
-		.text-noir {
-			color: $black;
-			font-family: $font-title;
-		}
+		
 	}
 	&-sub {
 		float: left;
@@ -144,19 +141,68 @@ body {
 	}
 }
 
-body.light-mode {
+.light-mode {
 	background-color: #fff;
 	color: #333;
 	transition: background-color 0.3s ease;
+	.text-noir {
+		color: $black;
+		font-family: $font-title;
+	}
 }
 
-body.dark-mode {
-	background-color: #1a1919;
+.dark-mode {
+	.section__title {
+		&-main {
+			position: relative;
+			font-size: 15vw;
+			font-weight: 300;
+			font-family: $font-title;
+			line-height: 1;
+			margin-bottom: 4rem;
+			color: $black;
+			text-shadow:
+			-1px -1px 0 #fff,
+			1px -1px 0 #fff,
+			-1px 1px 0 #fff,
+			1px 1px 0 #fff;
+			.numbering {
+				position: absolute;
+				font-family: $font-base;
+				text-shadow:
+				-1px -1px 0 #fff,
+				1px -1px 0 #fff,
+				-1px 1px 0 #fff,
+				1px 1px 0 #fff;
+				font-size: 30px;
+				@include sm {
+					top: -10px;
+				}
+			}
+
+		}
+		&-sub {
+			float: left;
+			margin-bottom: 0.5em;
+			font-size: 10vw;
+			font-weight: 300;
+			font-family: $font-title;
+		}
+		&-tab {
+			float: left;
+			font-size: 15vw;
+			font-weight: 300;
+			font-family: $font-title;
+			margin-bottom: 1rem;
+
+		}
+	}
+
 	p {
 		color: rgb(167, 167, 167);
 	}
 	.text-noir {
-		color: rgb(129, 129, 129);
+		color: white;
 		font-family: $font-title;
 	}
 }
@@ -186,6 +232,9 @@ body.dark-mode {
 	.indent-3 {
 		padding-left: 3rem;
 		font-size: 18px;
+		@include sm {
+			font-size: 16px;
+		}
 	}
 	.indent-4 {
 		text-indent: 4rem;

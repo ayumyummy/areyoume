@@ -1,7 +1,5 @@
 import React from 'react'
 
-import TabItems from '../components/Tabs';
-
 const About = (props) => (
     <section id="about">
       <div className="container">
@@ -34,7 +32,7 @@ const About = (props) => (
           </h3>
         </div>
        
-      <TabItems/>
+
         
       
       </div>

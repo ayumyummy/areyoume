@@ -1,7 +1,11 @@
 
 
 /* Header */
-	
+header {
+	position: fixed;
+	top: 0;
+	z-index: 99;
+}
 #landing {
 	position: relative;
 	h1 {
@@ -36,6 +40,7 @@
 	height: 100px;
 	overflow-x: hidden;
 	z-index: -1;
+	margin-bottom: 3rem;
 	
 }
 

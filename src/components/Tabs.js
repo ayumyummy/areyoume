@@ -14,7 +14,7 @@ class TabItems extends React.Component {
       <Tabs>
         <div>
           <TabList>
-            <Tab className="section__title-tab bug_link mr-3" data-text="skills">skills</Tab>
+            <Tab className="section__title-tab bug_link mr-3" data-text="skills"><span className="numbering">#2</span>skills</Tab>
             <Tab className="section__title-tab bug_link" data-text="tools">tools</Tab>
           </TabList>
         </div>

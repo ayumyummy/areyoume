@@ -1,204 +1,196 @@
-.light-mode .skill {
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-gap: 10px;
-    margin: auto;
-    max-width: 1200px;
-    justify-content: right;
-    padding: 5px;
-    @include md {
-        grid-template-columns: 90px 90px 90px
-    }
-    .box__inner {
-        background: transparent;
-        padding: 10px 15px;
-        width: calc(100% - 30px);
-        height: calc(100% - 20px);
-        transition: inherit;
-        border: 1px solid $black;
+#skills-tools {
+    .skill {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-gap: 10px;
+        margin: auto;
+        max-width: 1200px;
+        justify-content: right;
+        padding: 5px;
         @include md {
-            grid-template-columns: 90px 90px 90px ;
-            padding: 10px;
-            width: calc(100% - 20px);
-            height: calc(100% - 25px);
+            grid-template-columns: 90px 90px 90px;
+            justify-content: center;
         }
-        .level {
-            font-size: 11px;
-            text-align: right;
-            display: block;
-        }
-        .title {
-            font: 700 34px/1.3 $font-title;
-            margin: 0.3em 0 0;
-            transition: 0.8s ease 600ms;
-        }
-        .titleFull {
-            font: 500 12px $font-base;
-            margin-top: -0.2em;
+        .box__inner {
+            background: transparent;
+            padding: 10px 15px;
+            width: calc(100% - 30px);
+            height: calc(100% - 20px);
+            transition: inherit;
             @include md {
-                font: 500 11px $font-base;
+                padding: 10px;
+                width: calc(100% - 20px);
+                height: calc(100% - 25px);
+            }
+            .level {
+                font-size: 11px;
+                text-align: right;
+                display: block;
+            }
+            .title {
+                font: 700 34px/1.3 $font-title;
+                margin: 0.3em 0 0;
+                transition: 0.8s ease 600ms;
+            }
+            .titleFull {
+                font: 500 12px $font-base;
+                margin-top: -0.2em;
+                @include md {
+                    font: 500 11px $font-base;
+                }
+            }
+
+        }
+    }
+    .skill-container {
+        width: calc(100% - 10rem);
+        @include md {
+            width: 100%;
+        }
+        h3 {
+            color: transparent ;
+        }
+        .skills {
+            margin: 0 0 30px 0;
+            padding: 0;
+
+            li {
+                display: block;
+                position: relative;
+                background-color: transparent;
+                
+                margin: 10px 0;
+                transition: width 300ms ease-in-out;
+                font-size: 20px;
+                .collapsed & {
+                    width: 0 !important;
+                }
+
+                p {
+                    padding: 5px;
+                    margin: 0;
+                    font-weight: normal;
+                    span {
+                        position: absolute;
+                        right: 10px;
+                        display: inline-block;
+                        width: 30px;
+                        top: 11px;
+                        text-align: right;
+                        font-weight: normal;
+                        font-size: 11px;
+                    }
+                }
+
+                
             }
         }
-      
     }
-
 }
 
-.light-mode .skill-container {
-    width: calc(100% - 10rem);
-    @include md {
-          width: 100%;
-    }
-    h3 {
-        color: transparent ;
-    }
-    .skills {
-    margin: 0 0 30px 0;
-    padding: 0;
-    
-    li {
-        display: block;
-        position: relative;
-        background-color: transparent;
-        border-bottom: 1px solid $black;
-        margin: 10px 0;
-        transition: width 300ms ease-in-out;
-        font-size: 20px;
-        .collapsed & {
-            width: 0 !important;
-        }
 
-        p {
-            padding: 5px;
-            margin: 0;
-            font-weight: normal;
-            color: $black !important;
+.light-mode #skills-tools {
+   @extend #skills-tools;
+    .box__inner {
+        border: 1px solid $black;
+    }
+    .skills li {
+        border-bottom: 1px solid $black;
+    }
+    p {
+        color: $black !important;
+        span {
+            color: $black;
         }
+    }
+}
+
+.dark-mode #skills-tools {
+    @extend #skills-tools;
+
+    .box__inner {
+        border: 1px solid $white;
+    }
+
+    .skills li {
+        border-bottom: 1px solid $white;
+    }
+
+    p {
+        color: $white !important;
 
         span {
-            position: absolute;
-            right: 10px;
-            display: inline-block;
-            width: 30px;
-            top: 11px;
-            text-align: right;
-            font-weight: normal;
-            color: $black;
-            font-size: 11px;
+            color: $white;
         }
     }
 }
-}
 
-.dark-mode .skill {
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-gap: 10px;
-    margin: auto;
-    max-width: 1200px;
-    justify-content: right;
-    padding: 5px;
-    @include md {
-        grid-template-columns: 90px 90px 90px;
-        padding: 10px;
-        width: calc(100% - 20px);
-        height: calc(100% - 25px);
-    }
-    .box__inner {
-        background: transparent;
-        padding: 10px 15px;
-        width: calc(100% - 30px);
-        height: calc(100% - 20px);
-        transition: inherit;
-        border: 1px solid $white;
 
-        .level {
-            font-size: 11px;
-            text-align: right;
-            display: block;
-        }
 
-        .title {
-            font: 700 34px/1.3 $font-title;
-            margin: 0.3em 0 0;
-            transition: 0.8s ease 600ms;
-        }
-
-        .titleFull {
-            font: 500 12px $font-base;
-            margin-top: -0.2em;
-             @include md {
-                 font: 500 11px $font-base;
-             }
-        }
-
-    }
-
-}
-
-.dark-mode .skill-container {
-   width: calc(100% - 10rem);
-    @include md {
-          width: 100%;
-    }
-
-    h3 {
-        color: transparent;
-    }
-
-    .skills {
-        margin: 0 0 30px 0;
-        padding: 0;
-
-        li {
-            display: block;
-            position: relative;
-            background-color: transparent;
-            border-bottom: 1px solid $white;
-            margin: 10px 0;
-            transition: width 300ms ease-in-out;
-            font-size: 20px;
-
-            .collapsed & {
-                width: 0 !important;
-            }
-
-            p {
-                padding: 5px;
-                margin: 0;
-                font-weight: normal;
-                color: $white !important;
-            }
-
-            span {
-                position: absolute;
-                right: 10px;
-                display: inline-block;
-                width: 30px;
-                top: 11px;
-                text-align: right;
-                font-weight: normal;
-                color: $white;
-                font-size: 11px;
-            }
-        }
-    }
-}
 .react-tabs__tab-list {
     padding: 0;
+    margin-top: 5rem;
+    li:focus {
+        outline: 0;
+    }
     &:after {
         content: "";
         clear: both;
         display: table;
     }
+    .section__title-tab {
+        color: white;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        .numbering {
+            position: absolute;
+            font-family: $font-base;
+            color: white;
+            text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+            font-size: 30px;
+            top: 30px;
+            @include sm {
+                top: -10px;
+            }
+        }
+    }
+    .react-tabs__tab--selected {
+        color: $black;
+    }
 }
 .react-tabs__tab-panel {
     max-width: 90%;
+    @include md {
+       margin: 0 auto;
+    }
+}
+.dark-mode {
+    .section__title-tab {
+        color: $black;
+        text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+    }
+    .react-tabs__tab--selected {
+        color: white;
+    }
+}
+.light-mode {
+
 }
 .react-tabs__tab-panel--selected {
     display: block;
-    	transform: translateY(0);
-    	animation: change .49s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(0);
+    animation: change .49s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 @keyframes change {
     0% {

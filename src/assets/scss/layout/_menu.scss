@@ -1,11 +1,10 @@
 #menu {
-  font-family: $font-base;
-  background: white;
 	a {
     color: $black !important;
     line-height: 1;
      @include md {
       letter-spacing: -1px;
+      line-height: 0;
      }
   }
   .main-nav {
@@ -17,9 +16,12 @@
     -webkit-transform-origin: left top;
     -webkit-transform:rotate(-90deg) translateX(-100%);
     border-bottom: 1px solid $black;
+    
+    
     @include xl {
       height: 80px;
     }
+    
     @include md {
       transform: rotate(0deg);
       transform-origin: bottom center;
@@ -28,9 +30,10 @@
       top: auto;
       flex-direction: row-reverse;
       margin: 0;
-      z-index: 99999;
+      z-index: 999999;
       width: 100%;
       border-top: 1px solid $black;
+      background: white;
       
     }
    
@@ -58,6 +61,8 @@
 			top: auto;
 			flex-direction: row-reverse;
       margin: 0;
+      justify-content: center;
+      bottom: 15px;
 		}
 		li {
       font-size: 3.4vh;
@@ -65,11 +70,13 @@
        margin-right: 20px;
        float:right;
        height:100%;
-       line-height: 40px;
+      //  line-height: 40px;
        @include md {
          padding: 0;
+         font-size: 4vw;
         
        }
+
 			 
 		}
 	}
@@ -157,6 +164,10 @@ body.dark-mode {
   z-index: 999999;
   display: flex;
   padding: 20px;
+  @include md {
+    padding: 10px;
+
+  }
 }
 
 .content {
