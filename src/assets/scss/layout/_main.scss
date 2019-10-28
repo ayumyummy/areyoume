@@ -51,7 +51,7 @@ body {
 			}
 		}
 	}
-	section {
+	section{
 		// background: #faebd7;
 		position: relative;
 		// width: calc(100% - 5em);
@@ -60,9 +60,12 @@ body {
 		margin-bottom: 6rem;
 		margin-left: 8vw;
 		padding-right: 1rem;
+		&:last-child {
+			margin-bottom: 0rem;
+			min-height: auto;
+		}
 		@include lg {
-			margin-left: 10vw;
-
+			margin-left: 11vw;
 		}
 		@include md {
 			width: calc(100% - 40px);
