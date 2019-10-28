@@ -1,19 +1,29 @@
 import React from 'react';
-const loader = document.querySelector('.loader');
+// const loader = document.querySelector('.loader');
 
 // if you want to show the loader when React loads data again
-const showLoader = () => loader.classList.remove('loader--hide');
+// const showLoader = () => loader.classList.remove('loader--hide');
 
-const hideLoader = () => loader.classList.add('loader--hide');
+// const hideLoader = () => loader.classList.add('loader--hide');
 
 class Loader extends React.Component {
+  state = {
+    animating: true
+  }
+
   componentDidMount() {
-    this.props.hideLoader();
+    setTimeout(() => {
+      this.setState({ animating: false });
+      alert("はじまるよー！");
+    }, 5000);
   }
 
   render() {
     return (
-      <div>I'm the app</div>
+      <>
+     
+     <div class="loader"></div>
+          </>
     );
   }
 }
@@ -26,7 +36,7 @@ class Loader extends React.Component {
 //       hideLoader={hideLoader}
 //       showLoader={showLoader}
 //     />,
-//     // document.getElementById('app')
+//     document.getElementById('app')
 //   )
 //   , 1000);
 

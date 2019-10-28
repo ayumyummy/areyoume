@@ -9,7 +9,7 @@ import SkillsTools from '../sections/SkillsTools';
 import Contact from '../sections/Contact';
 import TagLine from '../components/Tag';
 import Footer from '../components/Footer';
-// import Loader from '../components/Loader';
+import Loader from '../components/Loader';
 // import DrawingLine from "../components/Drawing"
 const IndexPage = () => (
   
@@ -22,7 +22,7 @@ const IndexPage = () => (
         ]}
     >
     </Helmet>
-    {/* <Loader /> */}
+    <Loader/>
     <SEO title="Home" />
     {/* <DrawingLine /> */}
     <Landing />
