@@ -10,9 +10,9 @@ import Header from "./Header"
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <div>
-        <Cursor />
+  <>
+    <div className="site">
+      <Cursor />
 
         <div className="navbar">
           <DarkMode />

@@ -46,3 +46,61 @@
 @import 'helper/number';
 @import 'helper/global';
 @import 'helper/skillChart';
+
+@keyframes text-glitch {
+  0% {
+    transform: translate(0);
+    text-shadow:
+      2px 0 #ff00ff,
+      -2px 0 #00ffff;
+  }
+
+  20% {
+    transform: translate(-2px, 1px);
+    text-shadow:
+      4px 0 #ff00ff,
+      -1px 0 #00ffff;
+  }
+
+  40% {
+    transform: translate(2px, -1px);
+    text-shadow:
+      1px 0 #ff00ff,
+      -4px 0 #00ffff;
+  }
+
+  60% {
+    transform: translate(-1px, 0);
+    text-shadow:
+      3px 0 #00ffff,
+      -3px 0 #ff00ff;
+  }
+
+  80% {
+    transform: translate(2px, 1px);
+    text-shadow:
+      4px 0 #ff00ff,
+      -2px 0 #00ffff;
+  }
+
+  100% {
+    transform: translate(0);
+    text-shadow:
+      2px 0 #ff00ff,
+      -2px 0 #00ffff;
+  }
+}
+
+.site {
+  h1,
+  h4,
+  h5,
+  h6,
+  a,
+  span,
+  li {
+    &:hover {
+      animation: text-glitch 0.18s steps(2, end) infinite;
+    }
+  }
+}

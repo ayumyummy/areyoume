@@ -163,7 +163,7 @@ body {
 			font-family: $font-title;
 			line-height: 1;
 			margin-bottom: 4rem;
-			color: $black;
+			color: $white;
 			text-shadow:
 			-1px -1px 0 #fff,
 			1px -1px 0 #fff,
@@ -172,11 +172,11 @@ body {
 			.numbering {
 				position: absolute;
 				font-family: $font-base;
-				text-shadow:
+				/* text-shadow:
 				-1px -1px 0 #fff,
 				1px -1px 0 #fff,
 				-1px 1px 0 #fff,
-				1px 1px 0 #fff;
+				1px 1px 0 #fff; */
 				font-size: 30px;
 				@include sm {
 					top: -10px;
