@@ -5,7 +5,7 @@ const Footer = (props) => (
     <section>
       <div className="inner">
         <ul>
-            <li>&copy; 2019 — built by me  all&nbsp;rights&nbsp;reserved</li>
+            <li>&copy; 2026 — built by me  all&nbsp;rights&nbsp;reserved</li>
         </ul>
       </div>
     </section>

@@ -35,7 +35,7 @@ class TabAbout extends React.Component {
           tabKey={'1'}
           style={{ width: 'auto', height: 950, background: 'transparent' }}
           tabsHeaderStyle={{ height: 'auto', width: 'auto'}}
-          activeTabStyle={{ background: 'transparent', color: '#0e1111' }}
+          activeTabStyle={{ background: 'transparent', color: '#1d1d1d' }}
           unActiveTabStyle={{ color: '#efefef', textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }}
           rightTabTitle={<h4 className="section__title-tab bug_link" data-text="tools">tools </h4>}
           leftTabTitle={<h4 className="section__title-tab bug_link mr-3" data-text="skills">skills</h4>}
