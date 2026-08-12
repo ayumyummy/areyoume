@@ -1,66 +1,66 @@
 import React, { Component } from "react";
-// import InlineSVG from "svg-inline-react";
-import { TweenMax } from "gsap/TweenMax";
+import { gsap } from "gsap";
 
 class Cursor extends Component {
-
   constructor(props) {
-    super(props)
-    this.cursorIcon = this.cursorIcon.bind(this)
+    super(props);
+
+    this.mouseX = 0;
+    this.mouseY = 0;
+    this.posX = 0;
+    this.posY = 0;
+
+    this.handleMouseMove = this.handleMouseMove.bind(this);
   }
+
   componentDidMount() {
-    this.cursorIcon()
+    this.cursor = document.querySelector(".cursor");
+    this.follower = document.querySelector(".cursor-follower");
+
+    document.addEventListener("mousemove", this.handleMouseMove);
+
+    this.animation = gsap.to({}, {
+      duration: 0.016,
+      repeat: -1,
+
+      onRepeat: () => {
+        this.posX += (this.mouseX - this.posX) / 10;
+        this.posY += (this.mouseY - this.posY) / 10;
+
+        gsap.set(this.follower, {
+          left: this.posX - 10,
+          top: this.posY - 10,
+        });
+
+        gsap.set(this.cursor, {
+          left: this.mouseX,
+          top: this.mouseY,
+        });
+      },
+    });
   }
 
-  cursorIcon() {
-    let cursor = document.querySelector('.cursor'),
-        follower = document.querySelector(".cursor-follower");
+  componentWillUnmount() {
+    document.removeEventListener("mousemove", this.handleMouseMove);
 
-   let posX = 0,
-       posY = 0;
+    if (this.animation) {
+      this.animation.kill();
+    }
+  }
 
-   let mouseX = 0,
-       mouseY = 0;
-
-   TweenMax.to({}, 0.016, {
-     repeat: -1,
-     onRepeat: function() {
-       posX += (mouseX - posX) / 10;
-       posY += (mouseY - posY) / 10;
-
-       TweenMax.set(follower, {
-           css: {    
-           left: posX - 10,
-           top: posY - 10
-           }
-       });
-
-       TweenMax.set(cursor, {
-           css: {    
-           left: mouseX,
-           top: mouseY
-           }
-       });
-     }
-   });
-
-    document.addEventListener('mousemove', (e) => {
-       mouseX = e.pageX;
-       mouseY = e.pageY;
-   });
-
-};
+  handleMouseMove(e) {
+    this.mouseX = e.pageX;
+    this.mouseY = e.pageY;
+  }
 
   render() {
     return (
       <>
-     <div className="cursor"></div>
-      <div className="cursor-follower"></div>
-     </>
-    )
+        <div className="cursor"></div>
+        <div className="cursor-follower"></div>
+      </>
+    );
   }
 }
-export default Cursor
 
-
-
+export default Cursor;

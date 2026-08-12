@@ -1,40 +1,28 @@
-
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-// import Pointer from "./Pointer"
-import DarkMode from './DarkMode/DarkMode';
-import '../assets/scss/main.scss'
-import '../assets/js/main.js'
+
+import DarkMode from "./DarkMode/DarkMode"
+import "../assets/scss/main.scss"
+import "../assets/js/main.js"
 
 import Cursor from "./Cursor"
 import Header from "./Header"
-// import Header from "./Effect"
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-  
 
+const Layout = ({ children }) => {
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <div>
-        <Cursor/>
+        <Cursor />
+
         <div className="navbar">
           <DarkMode />
         </div>
-        <Header/>
-        
+
+        <Header />
+
         <main>{children}</main>
       </div>
-    </> 
+    </>
   )
 }
 
