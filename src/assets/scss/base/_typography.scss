@@ -6,7 +6,7 @@
 /*------------------------------------*\
     # Simple Typography Settings
 \*------------------------------------*/
-
+@use "sass:math";
 // Font Family
 $font-base: 'Cousine', monospace;
 $font-title: 'Roboto', sans-serif;
@@ -19,7 +19,7 @@ $small-size: 12px;
 
 // Paragraph Styles
 $paragraph-color : #505050;
-$paragraph-size : rem(17px);
+$paragraph-size: 1.0625rem;
 $paragraph-line-height: 1.5em;
 $paragraph-margin : 20px;
 
@@ -106,7 +106,7 @@ h3 {
 
 h4 {
     font-size: $base-size / 1.7;
-    margin-bottom: $header-margin / 1.7;
+    margin-bottom: math.div($header-margin, 1.7);
 }
 
 h5 {
