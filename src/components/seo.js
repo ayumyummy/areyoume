@@ -8,11 +8,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import {
+  useStaticQuery,
+  graphql
+} from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
+function SEO({
+  description,
+  lang,
+  meta,
+  title
+}) {
+  const {
+    site
+  } = useStaticQuery(
+    graphql `
       query {
         site {
           siteMetadata {
@@ -27,15 +37,20 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
 
-  return (
-    <Helmet
-      htmlAttributes={{
+  return ( <
+    Helmet htmlAttributes = {
+      {
         lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
+      }
+    }
+    title = {
+      title
+    }
+    titleTemplate = {
+      `%s | ${site.siteMetadata.title}`
+    }
+    meta = {
+      [{
           name: `description`,
           content: metaDescription,
         },
@@ -53,7 +68,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -67,7 +82,20 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+        {
+          property: `og:image`,
+          content: `https://areyoume.vercel.app/og-image.jpg`,
+        },
+        {
+          property: `og:url`,
+          content: `https://areyoume.vercel.app/`,
+        },
+        {
+          name: `twitter:image`,
+          content: `https://areyoume.vercel.app/og-image.jpg`,
+        },
+      ].concat(meta)
+    }
     />
   )
 }
