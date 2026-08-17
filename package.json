@@ -3,6 +3,9 @@
   "private": true,
   "description": "Ayumi's portfolio website",
   "version": "1.0.0",
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "gatsby": "^5.16.0",
     "gatsby-image": "^3.11.0",
@@ -30,6 +33,7 @@
     "prettier": "^3.6.2",
     "react-tabs": "^6.1.0"
   },
+  
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
