@@ -1,32 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
-import Helmet from 'react-helmet'
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Landing from '../sections/Landing';
-import About from '../sections/About';
-import SkillsTools from '../sections/SkillsTools';
-import Contact from '../sections/Contact';
-import TagLine from '../components/Tag';
-import Footer from '../components/Footer';
-// import Loader from '../components/Loader';
-// import DrawingLine from "../components/Drawing"
+import Landing from "../sections/Landing"
+import About from "../sections/About"
+import SkillsTools from "../sections/SkillsTools"
+import Contact from "../sections/Contact"
+import TagLine from "../components/Tag"
+import Footer from "../components/Footer"
+
 const IndexPage = () => (
-  
   <Layout>
-    <Helmet
-        title="are you me ?"
-        meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-        ]}
-    >
-    </Helmet>
-    {/* <Loader /> */}
-    <SEO title="Home" />
-    {/* <DrawingLine /> */}
+    <SEO title="Are You Me?" />
+
     <Landing />
-    <TagLine/>
+    <TagLine />
     <About />
     <TagLine />
     <SkillsTools />
@@ -37,4 +24,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage;
+export default IndexPage
