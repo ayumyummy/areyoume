@@ -93,11 +93,10 @@
 
 .site {
   h1,
-  h4,
+  h3,
   h5,
   h6,
   a,
-  span,
   li {
     &:hover {
       animation: text-glitch 0.18s steps(2, end) infinite;

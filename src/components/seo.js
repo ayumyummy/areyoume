@@ -37,10 +37,10 @@ function SEO({
 
   const metaDescription = description || site.siteMetadata.description
 
-  return ( <
-    Helmet htmlAttributes = {
+  return ( < Helmet htmlAttributes = {
       {
         lang,
+        translate: "no",
       }
     }
     title = {
@@ -53,6 +53,10 @@ function SEO({
       [{
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `google`,
+          content: `notranslate`,
         },
         {
           property: `og:title`,

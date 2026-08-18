@@ -12,7 +12,7 @@
     width: 100vh;    
     height: 90px;
     position: fixed;
-    background: white;
+    background: $white;
     -webkit-transform-origin: left top;
     -webkit-transform:rotate(-90deg) translateX(-100%);
     border-bottom: 1px solid $black;
@@ -225,7 +225,7 @@ body.light-mode button {
   display: flex;
   margin: 0 auto;
   & > button {
-    font-size: 1.2em;
+    font-size: 1.7em;
     background: none;
     border: none;
     cursor: pointer;
@@ -274,7 +274,7 @@ input[type='checkbox'].dmcheck {
     cursor: pointer;
     position: absolute;
     left: 2px;
-    background: #fff;
+    background: #efefef;
     opacity: 0.9;
     background-color: #f6f6f6;
   }

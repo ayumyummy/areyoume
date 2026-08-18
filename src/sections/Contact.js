@@ -3,9 +3,9 @@ import React from 'react'
 const Contact = (props) => (
     <section id="contact">
         <div className="container">
-            <h2 className="section__title-main">
+            <h3 className="section__title-main">
                 <span className="numbering">#3</span>contact
-            </h2>
+            </h3>
         
             <div className="block-indent title">
               
