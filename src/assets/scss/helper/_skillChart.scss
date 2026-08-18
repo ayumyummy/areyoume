@@ -148,6 +148,10 @@
     padding: 0;
     margin-top: 5rem;
 
+    @include md {
+        margin-top: -4rem;
+    }
+
     li:focus {
         outline: 0;
     }
