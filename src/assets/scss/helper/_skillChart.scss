@@ -13,6 +13,10 @@
             justify-content: center;
         }
 
+        @include sm {
+            margin-top: 2rem;
+        }
+
         .box__inner {
             background: transparent;
             padding: 10px 15px;
@@ -149,7 +153,11 @@
     margin-top: 5rem;
 
     @include md {
-        margin-top: -4rem;
+        margin-top: 2rem;
+    }
+
+    @include md {
+        margin-top: 0rem;
     }
 
     li:focus {

@@ -10,6 +10,9 @@
 			padding: 0px 20px 0px;
 
 		}
+		@include sm {
+			top: -30px;
+		}
 		ul {
 			padding-left: 0;
 		}
