@@ -10,7 +10,7 @@ const About = (props) => (
           <h4>
             <p className="indent-1"><i>noun</i></p>
             <p className="indent-2">1 <strong>Ayumi Mamiya</strong></p>
-            <p className="indent-3">a. Growing up the in the city of Tokyo, surrounded by technology, it was part of my culture and my identity to love coding.</p>
+            <p className="indent-3">a. Growing up in the city of Tokyo, surrounded by technology, it was part of my culture and my identity to love coding.</p>
             <p className="indent-3">b. I have lived on 3 continents and learned many languages, which have all influenced my drive and ambition professionally and personally.</p>
           <p className="indent-3">c. I work hard, but dream bigger. I want to inspire and impress a whole world of people, including my friends &#10084;</p>
           </h4>
